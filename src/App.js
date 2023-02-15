@@ -1,7 +1,10 @@
-import Title from "./components/Title";
 import {
   useState, useEffect
 } from "react";
+
+import Title from "./components/Title";
+import QuestionBlock from "./components/QuestionBlock";
+import QuestionsBlock from "./components/QuestionsBlock";
 
 const App = () => {
 
@@ -27,6 +30,9 @@ const App = () => {
   return (
     <div>
       <Title title={quiz?.title} subtitle={quiz?.subtitle} />
+      {quiz && quiz?.content.map(contentItem => (
+        <QuestionsBlock key={contentItem.id} quizItem={contentItem} />
+      ))}
     </div>
   );
 }
