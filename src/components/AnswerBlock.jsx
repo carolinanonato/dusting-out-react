@@ -14,7 +14,7 @@ const AnswerBlock = ({answerOptions, chosenAnswers}, ref) => {
                 setResult(answerOptions[0])
             }
         })
-    }, [result])
+    }, [result, answerOptions, chosenAnswers])
 
 
     return (

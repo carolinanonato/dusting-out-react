@@ -9,7 +9,7 @@ const QuestionBlock = ({
 
 const handleClick = () => {
 setChosenAnswerItems((prevState) => [...prevState, question.text])
-setUnansweredQuestionIds(unansweredQuestionIds.filter((id) => id != quizItemId))
+setUnansweredQuestionIds(unansweredQuestionIds.filter((id) => id !== quizItemId))
 }
 
 const validPick = !chosenAnswerItems?.includes(question.text) &&
